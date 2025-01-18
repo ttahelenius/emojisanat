@@ -8,6 +8,8 @@ emojiosat = {"A": "🅰", "B": "🅱", "AB": "🆎", "CL": "🆑", "O": "🅾", 
              "FREE": "🆓", "ABC": "🔤", "M": "Ⓜ", "UP": "🆙", "ON": "🔛", "I": "ℹ", "ID": "🆔",
              "VS": "🆚"}
 
+valilyonteja_tulosteessa = True
+
 def emojifioi(str, aiemmatOsat=""):
     if len(str) == 0:
         return [aiemmatOsat]
@@ -24,5 +26,8 @@ if __name__ == "__main__":
         sana = sana[:-1] # rivivaihto pois
         osat = emojifioi(sana)
         for osa in osat:
-            print(osa)
+            if valilyonteja_tulosteessa:
+                print(' '.join(kirjain for kirjain in osa))
+            else:
+                print(osa)
     sanalista.close()

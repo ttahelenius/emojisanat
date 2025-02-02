@@ -17,6 +17,8 @@ Tämä on kuitenkin oma valintani ja sitä on helppoa tarvittaessa muuttaa. Käy
 git clone https://github.com/ttahelenius/emojisanat.git
 ```
 
+Huom: Python 3.9+ vaadittu.
+
 # **Sana-aineiston tekijänoikeudet**
 
 ```nykysuomensanalista2022.txt``` on adaptoitu Kotimaisten kielten keskuksen Nykysuomen sanalistasta 2022. Saatavissa https://kaino.kotus.fi/lataa/nykysuomensanalista2022.csv

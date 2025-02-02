@@ -6,17 +6,17 @@ emojiosat = {"A": "🅰", "B": "🅱", "AB": "🆎", "CL": "🆑", "O": "🅾", 
              "6": "6️⃣", "7": "7️⃣", "8": "8️⃣", "9": "9️⃣", "10": "🔟", "C": "©", "R": "®", "TM": "™",
              "END": "🔚", "BACK": "🔙", "SOON": "🔜", "TOP": "🔝", "COOL": "🆒", "NEW": "🆕",
              "FREE": "🆓", "ABC": "🔤", "M": "Ⓜ", "UP": "🆙", "ON": "🔛", "I": "ℹ", "ID": "🆔",
-             "VS": "🆚", "ATM": "🏧", "ABCD": "🔡", "ABCD": "🔠"}
+             "VS": "🆚", "ATM": "🏧", "ABCD": "🔠"}
 
 valilyonteja_tulosteessa = True
 
-def emojifioi(str, aiemmatOsat=""):
-    if len(str) == 0:
-        return [aiemmatOsat]
+def emojifioi(s: str, aiemmat_osat: str = "") -> list[str]:
+    if len(s) == 0:
+        return [aiemmat_osat]
     lista = []
     for osa in emojiosat:
-        if str.upper().startswith(osa):
-            tulos = emojifioi(str[len(osa):], aiemmatOsat + emojiosat[osa])
+        if s.upper().startswith(osa):
+            tulos = emojifioi(s[len(osa):], aiemmat_osat + emojiosat[osa])
             lista.extend(tulos)
     return lista
 
